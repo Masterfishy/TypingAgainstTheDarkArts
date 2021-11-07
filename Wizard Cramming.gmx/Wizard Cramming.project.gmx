@@ -9,6 +9,8 @@
       <sound>sound\mus_Xanaphia</sound>
       <sound>sound\mus_Snape</sound>
       <sound>sound\mus_Dwayne</sound>
+      <sound>sound\mus_Tutorial</sound>
+      <sound>sound\mus_Examinar</sound>
     </sounds>
     <sound>sound\snd_Voice</sound>
     <sound>sound\snd_Move</sound>
@@ -46,6 +48,7 @@
     </sprites>
     <sprites name="User Interface">
       <sprite>sprites\spr_notebook</sprite>
+      <sprite>sprites\TitleScreen</sprite>
     </sprites>
     <sprites name="Sketches">
       <sprite>sprites\spr_Sketchbook</sprite>
@@ -67,10 +70,13 @@
       <sprite>sprites\spr_Dwayne</sprite>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\TitleBackground</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_text.gml</script>
+    <script>scripts\scr_menu.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\handwriting</font>
@@ -86,6 +92,7 @@
     <objects name="User Interface">
       <object>objects\TextBox</object>
       <object>objects\notes</object>
+      <object>objects\menu</object>
     </objects>
     <objects name="Bosses">
       <object>objects\Boss</object>
@@ -113,6 +120,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\TitleRoom</room>
     <room>rooms\GymRoom</room>
     <room>rooms\DwayneRoom</room>
     <room>rooms\DevRoom</room>
