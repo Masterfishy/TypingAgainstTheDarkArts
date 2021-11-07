@@ -15,6 +15,7 @@
       <sprite>sprites\spr_layout</sprite>
       <sprite>sprites\spr_heart</sprite>
       <sprite>sprites\spr_boss</sprite>
+      <sprite>sprites\spr_hitbox</sprite>
     </sprites>
     <sprites name="Character">
       <sprite>sprites\spr_elduin</sprite>
@@ -26,6 +27,7 @@
     </sprites>
     <sprites name="Health Bar">
       <sprite>sprites\spr_bar</sprite>
+      <sprite>sprites\spr_barGray</sprite>
       <sprite>sprites\spr_barback</sprite>
       <sprite>sprites\spr_baract</sprite>
     </sprites>
@@ -37,30 +39,55 @@
     <sprites name="User Interface">
       <sprite>sprites\spr_notebook</sprite>
     </sprites>
+    <sprites name="Sketches">
+      <sprite>sprites\spr_Sketchbook</sprite>
+      <sprite>sprites\spr_sketchelduin</sprite>
+      <sprite>sprites\spr_sketchMagicMissile</sprite>
+      <sprite>sprites\spr_sketchGym</sprite>
+      <sprite>sprites\spr_sketchYou</sprite>
+      <sprite>sprites\spr_sketchMe</sprite>
+      <sprite>sprites\spr_sketchMove</sprite>
+      <sprite>sprites\spr_sketchBossBall</sprite>
+      <sprite>sprites\spr_sketchType</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_text.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\handwriting</font>
     <font>fonts\magic</font>
     <font>fonts\text</font>
     <font>fonts\textcooldown</font>
+    <font>fonts\dialogue</font>
   </fonts>
   <objects name="objects">
+    <object>objects\DevTool</object>
     <object>objects\Boss</object>
     <object>objects\Layout</object>
     <object>objects\notes</object>
     <object>objects\Elduin</object>
-    <object>objects\DevTool</object>
     <object>objects\Heart</object>
     <object>objects\MagicMissile</object>
     <object>objects\Fireball</object>
     <object>objects\BossFireball</object>
     <object>objects\Rockslide</object>
     <object>objects\Smoke</object>
+    <object>objects\TextBox</object>
+    <objects name="Sketch Tutorial">
+      <object>objects\SketchBook</object>
+      <object>objects\SketchElduin</object>
+      <object>objects\SketchMagicMissile</object>
+      <object>objects\SketchGym</object>
+      <object>objects\SketchBossBall</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\GymRoom</room>
+    <room>rooms\DwayneRoom</room>
+    <room>rooms\DevRoom</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
