@@ -55,18 +55,27 @@ global.lane4y = 832;
           <argument>
             <kind>1</kind>
             <string>///Start The Music
-audio_stop_all();
 currentRoom = room_get_name(room);
-
+if(currentRoom == "TitleRoom"){
+    audio_stop_all();
+    music = audio_play_sound(mus_Snape, 10, true);
+    audio_sound_gain(music, .5, 0);
+}
 if(currentRoom == "GymRoom"){
-    music = audio_play_sound(mus_Dwayne, 10, true);
-    audio_sound_gain(music, 0, 0);
+    audio_stop_all();
+    music = audio_play_sound(mus_Tutorial, 10, true);
+    audio_sound_gain(music, .5, 0);
 }
 else if(currentRoom == "DwayneRoom"){
-    music = audio_play_sound(mus_Xanaphia, 10, true);
-    audio_sound_gain(music, 0, 0);
+    audio_stop_all();
+    music = audio_play_sound(mus_Dwayne, 10, true);
+    audio_sound_gain(music, .5, 0);
 }
-
+else if(currentRoom == "CreditsRoom1"){
+    audio_stop_all();
+    music = audio_play_sound(mus_Examinar, 10, true);
+    audio_sound_gain(music, .5, 0);
+}
 </string>
           </argument>
         </arguments>
@@ -144,6 +153,28 @@ if(mouse_check_button_released(mb_left)){
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Go to next room
+if room_exists(room_next(room)) room_goto_next();
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
   </events>

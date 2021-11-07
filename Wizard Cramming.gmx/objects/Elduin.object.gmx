@@ -39,7 +39,7 @@ soundEffect = "";
 soundEffectTime = 30;
 
 fireballUnlocked = false;
-fireballLevel = 0;
+fireballLevel = 1;
 
 rockslideUnlocked = false;
 
@@ -869,7 +869,6 @@ if(spell == "MM" and alarm[0] == -1){
     alarm[0] = 20;
     newMissile = instance_create(x, y, MagicMissile);
     with (newMissile){
-        boss = instance_nearest(x, y, Dwayne)
         move_towards_point(boss.x, boss.y, mmSpeed);
         image_angle = direction;
     }
@@ -882,7 +881,6 @@ else if(spell == "FIREBALL" and alarm[1] == -1 and fireballUnlocked == true){
         alarm[1] = 90;
         newFireball = instance_create(x, y, Fireball);
         with (newFireball){
-            boss = instance_nearest(x, y, Dwayne)
             move_towards_point(boss.x, boss.y, 15);
             image_angle = direction;
         }
@@ -897,13 +895,11 @@ else if(spell == "ROCKSLIDE" and alarm[2] == -1 and rockslideUnlocked == true){
         newRockslide1 = instance_create(192, 832, Rockslide);
         newRockslide2 = instance_create(448, 864, Rockslide);
         with (newRockslide1){
-            boss = instance_nearest(x, y, Dwayne)
             move_towards_point(boss.x, boss.y, 15);
             image_speed = 9;
             image_angle = direction;
         }
         with (newRockslide2){
-            boss = instance_nearest(x, y, Dwayne)
             move_towards_point(boss.x, boss.y, 15);
             image_speed = 9;
             image_angle = direction;
@@ -916,13 +912,11 @@ else if(spell == "ROCKSLIDE" and alarm[2] == -1 and rockslideUnlocked == true){
         newRockslide3 = instance_create(704, 864, Rockslide);
         newRockslide4 = instance_create(960, 832, Rockslide);
         with (newRockslide3){
-            boss = instance_nearest(x, y, Dwayne)
             move_towards_point(boss.x, boss.y, 15);
             image_speed = 9;
             image_angle = direction;
         }
         with (newRockslide4){
-            boss = instance_nearest(x, y, Dwayne)
             move_towards_point(boss.x, boss.y, 15);
             image_speed = 9;
             image_angle = direction;
@@ -1003,6 +997,30 @@ else{
         </arguments>
       </action>
     </event>
+    <event eventtype="9" enumb="18">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Unlock All
+alarm[9] = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="9" enumb="13">
       <action>
         <libid>1</libid>
@@ -1033,7 +1051,6 @@ if(spell == "MM" and alarm[0] == -1){
     alarm[0] = 20;
     newMissile = instance_create(x, y, MagicMissile);
     with (newMissile){
-        boss = instance_nearest(x, y, Dwayne)
         move_towards_point(boss.x, boss.y, mmSpeed);
         image_angle = direction;
     }
@@ -1046,25 +1063,13 @@ else if(spell == "FIREBALL" and alarm[1] == -1 and fireballUnlocked == true){
         alarm[1] = 90;
         newFireball = instance_create(x, y, Fireball);
         with (newFireball){
-            boss = instance_nearest(x, y, Dwayne)
             move_towards_point(boss.x, boss.y, 15);
             image_angle = direction;
         }
+        soundEffect = "LVL1 FIREBALL"
+        alarm[11] = soundEffectTime;
+        spell = "";
     }
-    if(fireballLevel == 2){
-        alarm[1] = 90;
-        newFireball = instance_create(x, y, Fireball);
-        with (newFireball){
-            image_xscale = 1.5;
-            image_yscale = 1.5;
-            boss = instance_nearest(x, y, Dwayne)
-            move_towards_point(boss.x, boss.y, 15);
-            image_angle = direction;
-        }
-    }
-    soundEffect = "LVL" + fireballLevel + " FIREBALL"
-    alarm[11] = soundEffectTime;
-    spell = "";
 }
 else if(spell == "ROCKSLIDE" and alarm[2] == -1 and rockslideUnlocked == true){
     alarm[2] = 90;
@@ -1072,13 +1077,11 @@ else if(spell == "ROCKSLIDE" and alarm[2] == -1 and rockslideUnlocked == true){
         newRockslide1 = instance_create(192, 832, Rockslide);
         newRockslide2 = instance_create(448, 864, Rockslide);
         with (newRockslide1){
-            boss = instance_nearest(x, y, Dwayne)
             move_towards_point(boss.x, boss.y, 15);
             image_speed = 9;
             image_angle = direction;
         }
         with (newRockslide2){
-            boss = instance_nearest(x, y, Dwayne)
             move_towards_point(boss.x, boss.y, 15);
             image_speed = 9;
             image_angle = direction;
@@ -1091,13 +1094,11 @@ else if(spell == "ROCKSLIDE" and alarm[2] == -1 and rockslideUnlocked == true){
         newRockslide3 = instance_create(704, 864, Rockslide);
         newRockslide4 = instance_create(960, 832, Rockslide);
         with (newRockslide3){
-            boss = instance_nearest(x, y, Dwayne)
             move_towards_point(boss.x, boss.y, 15);
             image_speed = 9;
             image_angle = direction;
         }
         with (newRockslide4){
-            boss = instance_nearest(x, y, Dwayne)
             move_towards_point(boss.x, boss.y, 15);
             image_speed = 9;
             image_angle = direction;

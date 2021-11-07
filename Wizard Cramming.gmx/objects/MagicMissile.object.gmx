@@ -25,6 +25,40 @@
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///Target Current Boss
+currentRoom = room_get_name(room);
+if(currentRoom == "DwayneRoom"){
+    boss = instance_nearest(x, y, Dwayne)
+}
+else if(currentRoom == "CreditsRoom1"){
+    boss = instance_nearest(x, y, Xanaphia)
+}
+else if(currentRoom == "CreditsRoom2"){
+    boss = instance_nearest(x, y, Snake)
+}
+else if(currentRoom == "CreditsRoom3"){
+    boss = instance_nearest(x, y, Examinar)
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>///Set Magic Missile Speed
 mmSpeed = 20;
 image_speed = 1/4;

@@ -30,7 +30,7 @@ image_speed = 1/3;
 lesson = "0: Welcome!";
 saying = "";
 line = 0;
-alarm[0] = 120;
+alarm[0] = 10;
 player = instance_nearest(x, y, SketchElduin);
 bosshealth = 100;
 
