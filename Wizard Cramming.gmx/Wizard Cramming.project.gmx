@@ -65,6 +65,9 @@
     </sprites>
     <sprites name="Professors">
       <sprite>sprites\spr_Dwayne</sprite>
+      <sprite>sprites\spr_xanaphia</sprite>
+      <sprite>sprites\spr_snake</sprite>
+      <sprite>sprites\spr_examinar</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -91,6 +94,9 @@
       <object>objects\Boss</object>
       <object>objects\BossFireball</object>
       <object>objects\Dwayne</object>
+      <object>objects\Xanaphia</object>
+      <object>objects\Snake</object>
+      <object>objects\Examinar</object>
     </objects>
     <objects name="Spells">
       <object>objects\MagicMissile</object>
@@ -115,7 +121,9 @@
   <rooms name="rooms">
     <room>rooms\GymRoom</room>
     <room>rooms\DwayneRoom</room>
-    <room>rooms\DevRoom</room>
+    <room>rooms\CreditsRoom1</room>
+    <room>rooms\CreditsRoom2</room>
+    <room>rooms\CreditsRoom3</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
