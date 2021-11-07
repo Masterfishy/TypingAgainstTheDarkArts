@@ -71,18 +71,26 @@ with (newFireball){
     if(direct == 1){
         move_towards_point(global.lane1x, global.lane1y, 10);
         image_angle = direction;
+        var shoot = audio_play_sound(snd_shootBoss, 9, false);
+        audio_sound_pitch(shoot, random_range(.8,1.2))
     }
     else if(direct == 2){
         move_towards_point(global.lane2x, global.lane2y, 10);
         image_angle = direction;
+        var shoot = audio_play_sound(snd_shootBoss, 9, false);
+        audio_sound_pitch(shoot, random_range(.8,1.2))
     }
     else if(direct == 3){
         move_towards_point(global.lane3x, global.lane3y, 10);
         image_angle = direction;
+        var shoot = audio_play_sound(snd_shootBoss, 9, false);
+        audio_sound_pitch(shoot, random_range(.8,1.2))
     }
     else{
         move_towards_point(global.lane4x, global.lane4y, 10);
         image_angle = direction;
+        var shoot = audio_play_sound(snd_shootBoss, 9, false);
+        audio_sound_pitch(shoot, random_range(.8,1.2))
     }
 }
 alarm[2] = shootRate;
@@ -295,6 +303,14 @@ switch(line){
         alarm[0] = 300;
         line++;
         break;
+    case 27:
+        saying = "Bye-bye!";
+        scr_text(saying, .5, 285, 31);
+        alarm[0] = 180;
+        line++;
+        break;
+    case 28:
+        if room_exists(room_next(room)) room_goto_next();
 }
 </string>
           </argument>

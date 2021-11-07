@@ -51,7 +51,11 @@ image_speed = 1/4;
           <argument>
             <kind>1</kind>
             <string>///Reduce Boss Health
-bosshealth -= 10;
+if(bosshealth&gt;0){
+    bosshealth -= 10;
+}
+var hit = audio_play_sound(snd_hitBoss, 9, false);
+audio_sound_pitch(hit, random_range(.8,1.3))
 </string>
           </argument>
         </arguments>

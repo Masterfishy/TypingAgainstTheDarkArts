@@ -32,7 +32,7 @@ image_angle+=2;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="Elduin">
+    <event eventtype="4" ename="ElduinBackup">
       <action>
         <libid>1</libid>
         <id>603</id>

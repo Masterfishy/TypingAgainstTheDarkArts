@@ -5,9 +5,16 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\Dwayne</sound>
-    <sound>sound\Snape</sound>
-    <sound>sound\Xanaphia</sound>
+    <sounds name="Music">
+      <sound>sound\mus_Xanaphia</sound>
+      <sound>sound\mus_Snape</sound>
+      <sound>sound\mus_Dwayne</sound>
+    </sounds>
+    <sound>sound\snd_Voice</sound>
+    <sound>sound\snd_Move</sound>
+    <sound>sound\snd_hitBoss</sound>
+    <sound>sound\snd_shootBoss</sound>
+    <sound>sound\snd_hitPlayer</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Placeholders">
@@ -18,7 +25,8 @@
       <sprite>sprites\spr_hitbox</sprite>
     </sprites>
     <sprites name="Character">
-      <sprite>sprites\spr_elduin</sprite>
+      <sprite>sprites\spr_elduinPlaceholder</sprite>
+      <sprite>sprites\spr_idle</sprite>
     </sprites>
     <sprites name="Projectiles">
       <sprite>sprites\spr_magicmissile</sprite>
@@ -50,6 +58,14 @@
       <sprite>sprites\spr_sketchBossBall</sprite>
       <sprite>sprites\spr_sketchType</sprite>
     </sprites>
+    <sprites name="Classrooms">
+      <sprite>sprites\spr_ClassAttack</sprite>
+      <sprite>sprites\spr_ClassDefend</sprite>
+      <sprite>sprites\spr_ClassHeal</sprite>
+    </sprites>
+    <sprites name="Professors">
+      <sprite>sprites\spr_Dwayne</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -65,23 +81,35 @@
   </fonts>
   <objects name="objects">
     <object>objects\DevTool</object>
-    <object>objects\Boss</object>
-    <object>objects\Layout</object>
-    <object>objects\notes</object>
+    <object>objects\ElduinBackup</object>
     <object>objects\Elduin</object>
-    <object>objects\Heart</object>
-    <object>objects\MagicMissile</object>
-    <object>objects\Fireball</object>
-    <object>objects\BossFireball</object>
-    <object>objects\Rockslide</object>
-    <object>objects\Smoke</object>
-    <object>objects\TextBox</object>
+    <objects name="User Interface">
+      <object>objects\TextBox</object>
+      <object>objects\notes</object>
+    </objects>
+    <objects name="Bosses">
+      <object>objects\Boss</object>
+      <object>objects\BossFireball</object>
+      <object>objects\Dwayne</object>
+    </objects>
+    <objects name="Spells">
+      <object>objects\MagicMissile</object>
+      <object>objects\Fireball</object>
+      <object>objects\Rockslide</object>
+      <object>objects\Smoke</object>
+      <object>objects\Heart</object>
+    </objects>
     <objects name="Sketch Tutorial">
       <object>objects\SketchBook</object>
       <object>objects\SketchElduin</object>
       <object>objects\SketchMagicMissile</object>
       <object>objects\SketchGym</object>
       <object>objects\SketchBossBall</object>
+    </objects>
+    <objects name="Classrooms">
+      <object>objects\ClassAttack</object>
+      <object>objects\ClassDefend</object>
+      <object>objects\ClassHeal</object>
     </objects>
   </objects>
   <rooms name="rooms">

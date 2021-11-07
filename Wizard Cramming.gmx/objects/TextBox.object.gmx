@@ -140,6 +140,8 @@ draw_set_alpha(1);
 if (time &lt; text_length){
     time += spd;
     print = string_copy(words,0,time);
+    var voice = audio_play_sound(snd_Voice, 9, false);
+    audio_sound_pitch(voice, random_range(.5,1))
 }
 </string>
           </argument>
