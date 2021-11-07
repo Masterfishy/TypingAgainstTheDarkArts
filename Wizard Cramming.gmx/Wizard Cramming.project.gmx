@@ -5,7 +5,9 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\sound0</sound>
+    <sound>sound\Dwayne</sound>
+    <sound>sound\Snape</sound>
+    <sound>sound\Xanaphia</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Placeholders">
